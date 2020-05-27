@@ -8,4 +8,15 @@
     <string name="costo_unitario">Unit Cost</string>
     <string name="costo_total">Total Cost</string>
     <string name="nombre">Name</string>
+    <string name="opcion_cuero">Leather</string>
+    <string name="opcion_cuerda">Rope</string>
+    <string name="opcion_martillo">Hammer</string>
+    <string name="opcion_ancla">Anchor</string>
+    <string name="opcion_oro">Gold</string>
+    <string name="opcion_bano_oro">Gold bath</string>
+    <string name="opcion_oro_rosado">Pink gold</string>
+    <string name="opcion_plata">Silver</string>
+    <string name="opcion_niquel">Nickel</string>
+    <string name="opcion_peso_colombiano">But Colombian</string>
+    <string name="opcion_Dolar">Dollar</string>
 </resources>
