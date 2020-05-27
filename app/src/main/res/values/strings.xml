@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">MANILLAS</string>
+    <string name="titulo">Venta de Manillas</string>
+    <string name="cantidad">Escriba la Cantidad Deseada</string>
+    <string name="boton_calcular">Calcular Costo</string>
+    <string name="boton_limpiar">Limpiar</string>
+    <string name="costo_unitario">Costo Unitario</string>
+    <string name="costo_total">Costo Total</string>
+    <string name="nombre">Garibaldi Bandera</string>
+
 </resources>

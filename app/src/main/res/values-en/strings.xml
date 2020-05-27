@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HANDLES</string>
+    <string name="titulo">Handle Sale</string>
+    <string name="cantidad">Type the Desired Amount</string>
+    <string name="boton_calcular">Calculate Cost</string>
+    <string name="boton_limpiar">Clear</string>
+    <string name="costo_unitario">Unit Cost</string>
+    <string name="costo_total">Total Cost</string>
+    <string name="nombre">Name</string>
+</resources>

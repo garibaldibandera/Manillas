@@ -8,46 +8,42 @@
     tools:context=".MainActivity" >
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txtTitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="TextView" />
+        android:text="@string/titulo"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/txtCantidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="right"
+        android:hint="@string/cantidad"
+        android:inputType="number"
+        android:textSize="14sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="178dp"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="TextView" />
-
-        <EditText
-            android:id="@+id/editText"
-            android:layout_width="174dp"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:gravity="right"
-            android:inputType="number" />
-
     </LinearLayout>
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/cmbMaterial"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/cmbDije"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Spinner
-        android:id="@+id/spinner3"
+        android:id="@+id/cmbTipodije"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -58,20 +54,25 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnCalcular"
             android:layout_width="198dp"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="Button" />
+            android:text="@string/boton_calcular" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnLimpiar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="Button" />
+            android:text="@string/boton_limpiar" />
 
     </LinearLayout>
+
+    <Spinner
+        android:id="@+id/cmbTipomoneda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -79,18 +80,18 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/txtValorunitario"
             android:layout_width="197dp"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="TextView" />
+            android:text="@string/costo_unitario"
+            android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/lblValorunitario"
             android:layout_width="135dp"
             android:layout_height="wrap_content"
             android:gravity="right"
-            android:text="TextView" />
+            android:textSize="18sp" />
 
     </LinearLayout>
 
@@ -100,19 +101,28 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/txtValortotal"
             android:layout_width="196dp"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="TextView" />
+            android:text="@string/costo_total"
+            android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/lblValortotal"
             android:layout_width="135dp"
             android:layout_height="wrap_content"
             android:gravity="right"
-            android:text="TextView" />
+            android:textSize="18sp" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nombre"
+        android:textColor="#03CF0C"
+        android:textSize="10sp"
+        android:textStyle="italic" />
 
 </LinearLayout>
