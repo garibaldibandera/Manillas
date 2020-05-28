@@ -45,7 +45,10 @@
         <item>@string/opcion_peso_colombiano</item>
         <item>@string/opcion_Dolar</item>
     </string-array>
-
-
+    <string name="error_cantidad">Escriba la cantidad de manillas deseada</string>
+    <string name="error_material">Selecciones el tipo de material deseado</string>
+    <string name="error_dije">Selecciones el dije deseado</string>
+    <string name="error_tipodije">Selecciones el tipo de dije deseado</string>
+    <string name="error_tipomoneda">Selecciones el tipo de moneda deseada</string>
 
 </resources>

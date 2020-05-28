@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private EditText cantidad;
@@ -45,16 +46,56 @@ public class MainActivity extends AppCompatActivity {
         adapter=new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,optipomoneda);
         combo_tipomoneda.setAdapter(adapter);
         ArrayAdapter<String> adap_tipomoneda = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, optipomoneda);
-
-
-
     }
+
     public void aux_limpiar(View v){
         cantidad.setText("");
         combo_material.setSelection(0);
         combo_dije.setSelection(0);
         combo_tipodije.setSelection(0);
         combo_tipomoneda.setSelection(0);
+    }
+    public boolean validar(){
+        String error_cantidad, error_material, error_dije, error_tipodije, error_tipomoneda;
+        int posicion_mateiral, posicion_dije, posicion_tipodije, posicion_tipomoneda;
+
+        error_cantidad=getResources().getString(R.string.error_cantidad);
+        error_material=getResources().getString(R.string.error_material);
+        error_dije=getResources().getString(R.string.error_dije);
+        error_tipodije=getResources().getString(R.string.error_tipodije);
+        error_tipomoneda=getResources().getString(R.string.error_tipomoneda);
+
+        posicion_mateiral = combo_material.getSelectedItemPosition();
+        posicion_dije=combo_dije.getSelectedItemPosition();
+        posicion_tipodije=combo_tipodije.getSelectedItemPosition();
+        posicion_tipomoneda=combo_tipomoneda.getSelectedItemPosition();
+
+        if (cantidad.getText().toString().isEmpty()){
+            cantidad.setError(error_cantidad);
+            cantidad.requestFocus();
+            return false;
+        }else if(posicion_mateiral==0){
+            Toast.makeText(this, error_material, Toast.LENGTH_LONG).show();
+            combo_material.requestFocus();
+            return false;
+        }else if(posicion_dije==0){
+            Toast.makeText(this, error_dije, Toast.LENGTH_LONG).show();
+            combo_dije.requestFocus();
+            return false;
+        }else if(posicion_tipodije==0){
+            Toast.makeText(this, error_tipodije, Toast.LENGTH_LONG).show();
+            combo_tipodije.requestFocus();
+            return false;
+        }else if(posicion_tipomoneda==0){
+            Toast.makeText(this, error_tipomoneda, Toast.LENGTH_LONG).show();
+            combo_tipomoneda.requestFocus();
+            return false;
+        }
+        return true;
+
+
 
     }
+
+
 }

@@ -23,4 +23,9 @@
     <string name="seleccion_tipo_dije">Select the type of charm...</string>
     <string name="seleccion_tipo_moneda">"Select the type of currency ... "</string>
     <string name="nombre">Garibaldi Bandera</string>
+    <string name="error_cantidad">" Write the desired number of handles"</string>
+    <string name="error_material">" Select the type of material desired"</string>
+    <string name="error_dije">"Select the desired charm "</string>
+    <string name="error_tipodije">"Select the type of charm desired "</string>
+    <string name="error_tipomoneda">Select the desired currency type</string>
 </resources>
