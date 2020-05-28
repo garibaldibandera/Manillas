@@ -7,7 +7,6 @@
     <string name="boton_limpiar">Clear</string>
     <string name="costo_unitario">Unit Cost</string>
     <string name="costo_total">Total Cost</string>
-    <string name="nombre">Name</string>
     <string name="opcion_cuero">Leather</string>
     <string name="opcion_cuerda">Rope</string>
     <string name="opcion_martillo">Hammer</string>
@@ -19,4 +18,9 @@
     <string name="opcion_niquel">Nickel</string>
     <string name="opcion_peso_colombiano">But Colombian</string>
     <string name="opcion_Dolar">Dollar</string>
+    <string name="seleccion_material">Select the type of material...</string>
+    <string name="seleccion_dije">Select the charm...</string>
+    <string name="seleccion_tipo_dije">Select the type of charm...</string>
+    <string name="seleccion_tipo_moneda">"Select the type of currency ... "</string>
+    <string name="nombre">Garibaldi Bandera</string>
 </resources>

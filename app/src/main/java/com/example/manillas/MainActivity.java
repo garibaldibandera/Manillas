@@ -3,6 +3,7 @@ package com.example.manillas;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -44,6 +45,16 @@ public class MainActivity extends AppCompatActivity {
         adapter=new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,optipomoneda);
         combo_tipomoneda.setAdapter(adapter);
         ArrayAdapter<String> adap_tipomoneda = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, optipomoneda);
+
+
+
+    }
+    public void aux_limpiar(View v){
+        cantidad.setText("");
+        combo_material.setSelection(0);
+        combo_dije.setSelection(0);
+        combo_tipodije.setSelection(0);
+        combo_tipomoneda.setSelection(0);
 
     }
 }
