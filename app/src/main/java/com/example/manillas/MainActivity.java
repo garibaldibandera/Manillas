@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         posicion_tipomoneda=combo_tipomoneda.getSelectedItemPosition();
 
         if (cantidad.getText().toString().isEmpty()){
-            cantidad.setError(error_cantidad);
+            Toast.makeText(this, error_cantidad, Toast.LENGTH_LONG).show();
             cantidad.requestFocus();
             return false;
         }else if(posicion_mateiral==0){
