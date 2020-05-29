@@ -16,8 +16,8 @@
     <string name="opcion_oro_rosado">Pink gold</string>
     <string name="opcion_plata">Silver</string>
     <string name="opcion_niquel">Nickel</string>
-    <string name="opcion_peso_colombiano">But Colombian</string>
-    <string name="opcion_Dolar">Dollar</string>
+    <string name="opcion_peso_colombiano">COP $</string>
+    <string name="opcion_Dolar">USD $</string>
     <string name="seleccion_material">Select the type of material...</string>
     <string name="seleccion_dije">Select the charm...</string>
     <string name="seleccion_tipo_dije">Select the type of charm...</string>

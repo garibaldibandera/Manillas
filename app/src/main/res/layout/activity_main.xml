@@ -90,10 +90,10 @@
 
         <TextView
             android:id="@+id/lblValorunitario"
-            android:layout_width="135dp"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:gravity="right"
-            android:textSize="18sp" />
+            android:textSize="14sp" />
 
     </LinearLayout>
 
@@ -112,10 +112,10 @@
 
         <TextView
             android:id="@+id/lblValortotal"
-            android:layout_width="135dp"
+            android:layout_width="162dp"
             android:layout_height="wrap_content"
             android:gravity="right"
-            android:textSize="18sp" />
+            android:textSize="14sp" />
 
     </LinearLayout>
 

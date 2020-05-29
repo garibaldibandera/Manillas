@@ -20,8 +20,8 @@
     <string name="opcion_plata">Plata</string>
     <string name="opcion_niquel">Niquel</string>
     <string name="seleccion_tipo_moneda">Seleccione el tipo de moneda...</string>
-    <string name="opcion_peso_colombiano">Peso Colombiano</string>
-    <string name="opcion_Dolar">Dolar</string>
+    <string name="opcion_peso_colombiano">COP $</string>
+    <string name="opcion_Dolar">USD $</string>
     <string-array name="opmaterial">
         <item>@string/seleccion_material</item>
         <item>@string/opcion_cuero</item>
