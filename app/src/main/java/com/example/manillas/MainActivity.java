@@ -71,18 +71,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 selectMaterial = position;
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });
-
         combo_dije.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 selectDije = position;
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
             }
@@ -92,7 +89,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 selectTipodije = position;
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
             }
@@ -102,16 +98,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 selectMoneda = position;
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });
-
-
     }
 
-    public void limpiar(View v) {
+    public void limpiarbtn(View v) {
         limpiar();
     }
     public void limpiar(){
@@ -126,7 +119,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public boolean validar() {
         String error_cantidad, error_material, error_dije, error_tipodije, error_tipomoneda;
-        int posicion_mateiral, posicion_dije, posicion_tipodije, posicion_tipomoneda;
+        int posicion_material, posicion_dije, posicion_tipodije, posicion_tipomoneda;
 
         error_cantidad = getResources().getString(R.string.error_cantidad);
         error_material = getResources().getString(R.string.error_material);
@@ -134,16 +127,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         error_tipodije = getResources().getString(R.string.error_tipodije);
         error_tipomoneda = getResources().getString(R.string.error_tipomoneda);
 
-        posicion_mateiral = combo_material.getSelectedItemPosition();
+        posicion_material = combo_material.getSelectedItemPosition();
         posicion_dije = combo_dije.getSelectedItemPosition();
         posicion_tipodije = combo_tipodije.getSelectedItemPosition();
         posicion_tipomoneda = combo_tipomoneda.getSelectedItemPosition();
 
         if (cantidad.getText().toString().isEmpty()) {
+
             Toast.makeText(this, error_cantidad, Toast.LENGTH_LONG).show();
+//            cantidad.setError(error_cantidad);
             cantidad.requestFocus();
             return false;
-        } else if (posicion_mateiral == 0) {
+        } else if (posicion_material == 0) {
             Toast.makeText(this, error_material, Toast.LENGTH_LONG).show();
             combo_material.requestFocus();
             return false;
@@ -171,17 +166,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 limpiar();
                 break;
             case R.id.btnCalcular:
-                vlrCantidad = Integer.parseInt(cantidad.getText().toString());
-
                 if (validar()) {
+                    vlrCantidad = Integer.parseInt(cantidad.getText().toString());
                     if (selectMaterial == 1) {
                         if (selectDije == 1) {
                             if (selectTipodije == 1 || selectTipodije == 2 || selectTipodije == 3) {
                                 if (selectMoneda == 1) {
-                                    vlrUnitario = 100*3200;
+                                    vlrUnitario = 100 * 3200;
                                     vlrtotal = vlrCantidad * vlrUnitario;
                                     unitario.setText(getResources().getString(R.string.opcion_peso_colombiano) + vlrUnitario);
-                                    total.setText(getResources().getString(R.string.opcion_peso_colombiano) + vlrtotal);
+                                    total.setText(String.format("%1s %.1f", getResources().getString(R.string.opcion_peso_colombiano), vlrtotal));
                                 } else {
                                     vlrUnitario = 100;
                                     vlrtotal = vlrCantidad * vlrUnitario;
@@ -190,10 +184,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 }
                             } else if (selectTipodije == 4) {
                                 if (selectMoneda == 1) {
-                                    vlrUnitario = 80*3200;
+                                    vlrUnitario = 80 * 3200;
                                     vlrtotal = vlrCantidad * vlrUnitario;
                                     unitario.setText(getResources().getString(R.string.opcion_peso_colombiano) + vlrUnitario);
-                                    total.setText(getResources().getString(R.string.opcion_peso_colombiano) + vlrtotal);
+                                    total.setText(String.format("%1s %.1f", getResources().getString(R.string.opcion_peso_colombiano), vlrtotal));
                                 } else {
                                     vlrUnitario = 80;
                                     vlrtotal = vlrCantidad * vlrUnitario;
@@ -202,10 +196,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 }
                             } else if (selectTipodije == 5) {
                                 if (selectMoneda == 1) {
-                                    vlrUnitario = 70*3200;
+                                    vlrUnitario = 70 * 3200;
                                     vlrtotal = vlrCantidad * vlrUnitario;
                                     unitario.setText(getResources().getString(R.string.opcion_peso_colombiano) + vlrUnitario);
-                                    total.setText(getResources().getString(R.string.opcion_peso_colombiano) + vlrtotal);
+                                    total.setText(String.format("%1s %.1f", getResources().getString(R.string.opcion_peso_colombiano), vlrtotal));
                                 } else {
                                     vlrUnitario = 70;
                                     vlrtotal = vlrCantidad * vlrUnitario;
@@ -216,10 +210,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         } else if (selectDije == 2) {
                             if (selectTipodije == 1 || selectTipodije == 2 || selectTipodije == 3) {
                                 if (selectMoneda == 1) {
-                                    vlrUnitario = 120*3200;
+                                    vlrUnitario = 120 * 3200;
                                     vlrtotal = vlrCantidad * vlrUnitario;
                                     unitario.setText(getResources().getString(R.string.opcion_peso_colombiano) + vlrUnitario);
-                                    total.setText(getResources().getString(R.string.opcion_peso_colombiano) + vlrtotal);
+                                    total.setText(String.format("%1s %.1f", getResources().getString(R.string.opcion_peso_colombiano), vlrtotal));
                                 } else {
                                     vlrUnitario = 120;
                                     vlrtotal = vlrCantidad * vlrUnitario;
@@ -228,10 +222,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 }
                             } else if (selectTipodije == 4) {
                                 if (selectMoneda == 1) {
-                                    vlrUnitario = 100*3200;
+                                    vlrUnitario = 100 * 3200;
                                     vlrtotal = vlrCantidad * vlrUnitario;
                                     unitario.setText(getResources().getString(R.string.opcion_peso_colombiano) + vlrUnitario);
-                                    total.setText(getResources().getString(R.string.opcion_peso_colombiano) + vlrtotal);
+                                    total.setText(String.format("%1s %.1f", getResources().getString(R.string.opcion_peso_colombiano), vlrtotal));
                                 } else {
                                     vlrUnitario = 100;
                                     vlrtotal = vlrCantidad * vlrUnitario;
@@ -240,10 +234,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 }
                             } else if (selectTipodije == 5) {
                                 if (selectMoneda == 1) {
-                                    vlrUnitario = 90*3200;
+                                    vlrUnitario = 90 * 3200;
                                     vlrtotal = vlrCantidad * vlrUnitario;
                                     unitario.setText(getResources().getString(R.string.opcion_peso_colombiano) + vlrUnitario);
-                                    total.setText(getResources().getString(R.string.opcion_peso_colombiano) + vlrtotal);
+                                    total.setText(String.format("%1s %.1f", getResources().getString(R.string.opcion_peso_colombiano), vlrtotal));
                                 } else {
                                     vlrUnitario = 90;
                                     vlrtotal = vlrCantidad * vlrUnitario;
@@ -252,14 +246,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 }
                             }
                         }
-                    }else if (selectMaterial==2){
+                    } else if (selectMaterial == 2) {
                         if (selectDije == 1) {
                             if (selectTipodije == 1 || selectTipodije == 2 || selectTipodije == 3) {
                                 if (selectMoneda == 1) {
-                                    vlrUnitario = 90*3200;
+                                    vlrUnitario = 90 * 3200;
                                     vlrtotal = vlrCantidad * vlrUnitario;
                                     unitario.setText(getResources().getString(R.string.opcion_peso_colombiano) + vlrUnitario);
-                                    total.setText(getResources().getString(R.string.opcion_peso_colombiano) + vlrtotal);
+                                    total.setText(String.format("%1s %.1f", getResources().getString(R.string.opcion_peso_colombiano), vlrtotal));
                                 } else {
                                     vlrUnitario = 90;
                                     vlrtotal = vlrCantidad * vlrUnitario;
@@ -268,10 +262,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 }
                             } else if (selectTipodije == 4) {
                                 if (selectMoneda == 1) {
-                                    vlrUnitario = 70*3200;
+                                    vlrUnitario = 70 * 3200;
                                     vlrtotal = vlrCantidad * vlrUnitario;
                                     unitario.setText(getResources().getString(R.string.opcion_peso_colombiano) + vlrUnitario);
-                                    total.setText(getResources().getString(R.string.opcion_peso_colombiano) + vlrtotal);
+                                    total.setText(String.format("%1s %.1f", getResources().getString(R.string.opcion_peso_colombiano), vlrtotal));
                                 } else {
                                     vlrUnitario = 70;
                                     vlrtotal = vlrCantidad * vlrUnitario;
@@ -280,10 +274,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 }
                             } else if (selectTipodije == 5) {
                                 if (selectMoneda == 1) {
-                                    vlrUnitario = 50*3200;
+                                    vlrUnitario = 50 * 3200;
                                     vlrtotal = vlrCantidad * vlrUnitario;
                                     unitario.setText(getResources().getString(R.string.opcion_peso_colombiano) + vlrUnitario);
-                                    total.setText(getResources().getString(R.string.opcion_peso_colombiano) + vlrtotal);
+                                    total.setText(String.format("%1s %.1f", getResources().getString(R.string.opcion_peso_colombiano), vlrtotal));
                                 } else {
                                     vlrUnitario = 50;
                                     vlrtotal = vlrCantidad * vlrUnitario;
@@ -294,10 +288,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         } else if (selectDije == 2) {
                             if (selectTipodije == 1 || selectTipodije == 2 || selectTipodije == 3) {
                                 if (selectMoneda == 1) {
-                                    vlrUnitario = 110*3200;
+                                    vlrUnitario = 110 * 3200;
                                     vlrtotal = vlrCantidad * vlrUnitario;
                                     unitario.setText(getResources().getString(R.string.opcion_peso_colombiano) + vlrUnitario);
-                                    total.setText(getResources().getString(R.string.opcion_peso_colombiano) + vlrtotal);
+                                    total.setText(String.format("%1s %.1f", getResources().getString(R.string.opcion_peso_colombiano), vlrtotal));
                                 } else {
                                     vlrUnitario = 110;
                                     vlrtotal = vlrCantidad * vlrUnitario;
@@ -306,10 +300,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 }
                             } else if (selectTipodije == 4) {
                                 if (selectMoneda == 1) {
-                                    vlrUnitario = 90*3200;
+                                    vlrUnitario = 90 * 3200;
                                     vlrtotal = vlrCantidad * vlrUnitario;
                                     unitario.setText(getResources().getString(R.string.opcion_peso_colombiano) + vlrUnitario);
-                                    total.setText(getResources().getString(R.string.opcion_peso_colombiano) + vlrtotal);
+                                    total.setText(String.format("%1s %.1f", getResources().getString(R.string.opcion_peso_colombiano), vlrtotal));
                                 } else {
                                     vlrUnitario = 90;
                                     vlrtotal = vlrCantidad * vlrUnitario;
@@ -318,10 +312,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 }
                             } else if (selectTipodije == 5) {
                                 if (selectMoneda == 1) {
-                                    vlrUnitario = 80*3200;
+                                    vlrUnitario = 80 * 3200;
                                     vlrtotal = vlrCantidad * vlrUnitario;
                                     unitario.setText(getResources().getString(R.string.opcion_peso_colombiano) + vlrUnitario);
-                                    total.setText(getResources().getString(R.string.opcion_peso_colombiano) + vlrtotal);
+                                    total.setText(String.format("%1s %.1f", getResources().getString(R.string.opcion_peso_colombiano), vlrtotal));
                                 } else {
                                     vlrUnitario = 80;
                                     vlrtotal = vlrCantidad * vlrUnitario;
@@ -331,9 +325,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             }
                         }
                     }
-
-                }
                 break;
+            }
         }
     }
 }

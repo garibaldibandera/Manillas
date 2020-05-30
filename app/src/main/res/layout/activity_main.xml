@@ -8,6 +8,7 @@
     tools:context=".MainActivity" >
 
     <TextView
+        android:inputType="number"
         android:id="@+id/txtTitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -70,7 +71,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:onClick="aux_limpiar"
             android:text="@string/boton_limpiar" />
 
     </LinearLayout>
@@ -93,7 +93,7 @@
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:gravity="right"
-            android:textSize="14sp" />
+            android:textSize="18sp" />
 
     </LinearLayout>
 
@@ -115,7 +115,7 @@
             android:layout_width="162dp"
             android:layout_height="wrap_content"
             android:gravity="right"
-            android:textSize="14sp" />
+            android:textSize="18sp" />
 
     </LinearLayout>
 
