@@ -22,16 +22,19 @@
     <string name="seleccion_tipo_moneda">Seleccione el tipo de moneda...</string>
     <string name="opcion_peso_colombiano">COP $</string>
     <string name="opcion_Dolar">USD $</string>
+
     <string-array name="opmaterial">
         <item>@string/seleccion_material</item>
         <item>@string/opcion_cuero</item>
         <item>@string/opcion_cuerda</item>
     </string-array>
+
     <string-array name="opdije">
         <item>@string/seleccion_dije</item>
         <item>@string/opcion_martillo</item>
         <item>@string/opcion_ancla</item>
     </string-array>
+
     <string-array name="optipodije">
         <item>@string/seleccion_tipo_dije</item>
         <item>@string/opcion_oro</item>
@@ -40,15 +43,16 @@
         <item>@string/opcion_plata</item>
         <item>@string/opcion_niquel</item>
     </string-array>
+
     <string-array name="optipomoneda">
         <item>@string/seleccion_tipo_moneda</item>
         <item>@string/opcion_peso_colombiano</item>
         <item>@string/opcion_Dolar</item>
     </string-array>
+
     <string name="error_cantidad">Escriba la cantidad de manillas deseada</string>
     <string name="error_material">Selecciones el tipo de material deseado</string>
     <string name="error_dije">Selecciones el dije deseado</string>
     <string name="error_tipodije">Selecciones el tipo de dije deseado</string>
     <string name="error_tipomoneda">Selecciones el tipo de moneda deseada</string>
-
 </resources>

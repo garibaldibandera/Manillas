@@ -135,7 +135,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (cantidad.getText().toString().isEmpty()) {
 
             Toast.makeText(this, error_cantidad, Toast.LENGTH_LONG).show();
-//            cantidad.setError(error_cantidad);
             cantidad.requestFocus();
             return false;
         } else if (posicion_material == 0) {
@@ -157,7 +156,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         return true;
     }
-
 
     @Override
     public void onClick(View v) {
